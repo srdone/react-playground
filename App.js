@@ -1,8 +1,18 @@
 import React from 'react';
+import { participants } from './fake-data';
 
 class App extends React.Component {
+
   render() {
-    return <div>Hello World</div>
+    let participantList = participants.map(p => <li>{p.firstName}</li>);
+
+    return (
+      <div>
+        <ul>
+          {participantList}
+        </ul>
+      </div>
+    )
   }
 }
 
